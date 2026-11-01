@@ -45,16 +45,20 @@
           0%, 80%, 100% { transform: scale(0); }
           40% { transform: scale(1.0); }
       }
-    #netlify-badge {
-        display: none !important;
-    }
     </style>
 </head>
 
 <body>
 
     <!-- <dev id="Devpan"></dev> -->
-
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const badge = document.getElementById('netlify-badge');
+    if (badge) {
+      badge.remove();
+    }
+  });
+</script>
     <script>
         /**
          * @fileoverview Core Encryption Layer
