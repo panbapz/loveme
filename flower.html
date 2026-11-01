@@ -46,19 +46,18 @@
           40% { transform: scale(1.0); }
       }
     </style>
+    <script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const badge = document.getElementById('netlify-badge');
+        if (badge) badge.remove();
+    });
+    </script>
 </head>
 
 <body>
 
     <!-- <dev id="Devpan"></dev> -->
-<script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    const badge = document.getElementById('netlify-badge');
-    if (badge) {
-      badge.remove();
-    }
-  });
-</script>
+
     <script>
         /**
          * @fileoverview Core Encryption Layer
